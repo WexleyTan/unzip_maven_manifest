@@ -1,1 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maven-cd
+  labels:
+    app: maven-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maven-cd
+  template:
+    metadata:
+      labels:
+        app: maven-cd
+    spec:
+      containers:
+        - name: maven-container
+          image: neathtan/unzip_file:0
+          ports:
+            - containerPort: 8080
 
