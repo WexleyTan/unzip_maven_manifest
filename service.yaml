@@ -8,7 +8,7 @@ spec:
     app: maven-cd
   ports:
     - protocol: TCP
-      port: 3000          
-      targetPort: 3000  
-      containerPort: 3000
+      port: 8080          
+      targetPort: 8080  
+      containerPort: 8080
 
